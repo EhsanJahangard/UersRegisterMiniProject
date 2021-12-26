@@ -44,7 +44,7 @@ namespace UersRegister.View
                     if (context.SaveChanges() > 0)
                     {
                         Response.Write("<script> alert('ثبت نام با موفقیت انجام شد'); </script>");
-                        txtName.Text = txtFamily.Text = txtTell.Text = txtUserName.Text = txtAddress.Text = txtPass.Text = txtEmail.Text = gender = "";
+                        ClearForm();
                         Response.Redirect("~/View/DisplayInfo.aspx");
                     }
                     #endregion
@@ -156,7 +156,11 @@ namespace UersRegister.View
         }
 
 
+       void  ClearForm()
+        {
+            txtName.Text = txtFamily.Text = txtTell.Text = txtUserName.Text = txtAddress.Text = txtPass.Text = txtEmail.Text = gender = "";
 
+        }
 
 
         protected void RadioButton1_CheckedChanged(object sender, EventArgs e)

@@ -14,33 +14,7 @@
 
     <script type="text/javascript">
         $(function () {
-            $('#txtName').keypress(function (e) {
-                var myregex = new RegExp("^[\u0600-\u06FF\uFB8A\u067E\u0686\u06AF]+$");
-                if (myregex.test(e.key)) {
-                    return true;
-                }
-                e.preventDefault();
-                return false;
-            });
-        });
-    </script>
-
-    <script type="text/javascript">
-        $(function () {
-            $('#txtFamily').keypress(function (e) {
-                var myregex = new RegExp("^[\u0600-\u06FF\uFB8A\u067E\u0686\u06AF]+$");
-                if (myregex.test(e.key)) {
-                    return true;
-                }
-                e.preventDefault();
-                return false;
-            });
-        });
-    </script>
-
-    <script type="text/javascript">
-        $(function () {
-            $('#txtAddress').keypress(function (e) {
+            $('#txtName , #txtFamily , #txtAddress').keypress(function (e) {
                 var myregex = new RegExp("^[\u0600-\u06FF\uFB8A\u067E\u0686\u06AF]+$");
                 if (myregex.test(e.key)) {
                     return true;
